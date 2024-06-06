@@ -1,5 +1,11 @@
 <h1>Origin Full Batch API Result</h1>
 
+<%= form_tag({action: :index}, method: :get) do %>
+  <%= label_tag(:name, "Name:") %>
+  <%= text_field_tag(:name) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
 <% if @data %>
   <ul>
     <% @data['personalNames'].each do |name_result| %>
