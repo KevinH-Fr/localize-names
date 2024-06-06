@@ -1,0 +1,18 @@
+<h1>Origin Full Batch API Result</h1>
+
+<% if @data %>
+  <ul>
+    <% @data['personalNames'].each do |name_result| %>
+      <li><strong>ID:</strong> <%= name_result['id'] %></li>
+      <li><strong>Name:</strong> <%= name_result['name'] %></li>
+      <li><strong>Country Origin:</strong> <%= name_result['countryOrigin'] %></li>
+      <li><strong>Score:</strong> <%= name_result['score'] %></li>
+      <li><strong>Probability Calibrated:</strong> <%= name_result['probabilityCalibrated'] %></li>
+      <hr>
+    <% end %>
+  </ul>
+<% elsif @error %>
+  <p>Error: <%= @error %></p>
+<% else %>
+  <p>No data available.</p>
+<% end %>
