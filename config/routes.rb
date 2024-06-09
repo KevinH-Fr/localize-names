@@ -18,6 +18,11 @@ Rails.application.routes.draw do
  # root "home#index"
 
  get 'names/lookup', to: 'names#lookup'
+  get 'names/meaning', to: 'names#meaning'
+
+  resources :names, only: :show
+
+
  root 'names#lookup' # Set the root path to the lookup page
  
 end

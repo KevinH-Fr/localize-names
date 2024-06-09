@@ -8,6 +8,14 @@ class NamesController < ApplicationController
     end
   end
 
+  def show
+    @name = 'negre' # Or get the name from params
+    base_url = "https://www.behindthename.com/name/smith" # Replace with your base URL
+    @scraper = NameMeaningScraper.new(base_url)
+
+  end
+
+
   private
 
   def api_key

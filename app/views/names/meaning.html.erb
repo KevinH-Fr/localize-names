@@ -1,0 +1,23 @@
+<h1>Meaning of the Name</h1>
+
+<%= form_with url: names_meaning_path, method: :get, local: true do %>
+  <div>
+    <%= label_tag :name, "Enter a family name:" %>
+    <%= text_field_tag :name %>
+  </div>
+  <div>
+    <%= submit_tag "Lookup" %>
+  </div>
+<% end %>
+
+
+<hr>
+    <%= @meaning %>
+<hr>
+
+<% if @meaning.present? %>
+  <p><strong>Name:</strong> <%= @name.capitalize %></p>
+  <p><strong>Meaning:</strong> <%= @meaning %></p>
+<% else %>
+  <p>Meaning not found for the name <%= @name.capitalize %>.</p>
+<% end %>

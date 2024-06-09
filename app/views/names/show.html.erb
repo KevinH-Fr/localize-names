@@ -1,0 +1,9 @@
+<!-- app/views/pages/index.html.erb -->
+
+<h1>Selected Content</h1>
+
+<% if @scraper.selected_content.present? %>
+  <%= @scraper.selected_content %>
+<% else %>
+  <p>No content selected from the page.</p>
+<% end %>
