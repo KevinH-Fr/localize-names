@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+  get 'names/index'
+  get 'forebears/index'
   get 'namsor/index'
+  get 'forebears', to: 'forebears#index'
+  
   get 'scraper/index'
   get 'home/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -11,5 +15,9 @@ Rails.application.routes.draw do
   get 'scrape', to: 'scraper#index'
   
   # Defines the root path route ("/")
-  root "home#index"
+ # root "home#index"
+
+ get 'names/lookup', to: 'names#lookup'
+ root 'names#lookup' # Set the root path to the lookup page
+ 
 end

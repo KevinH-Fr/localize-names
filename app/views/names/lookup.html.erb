@@ -1,0 +1,17 @@
+<%= form_with url: names_lookup_path, method: :get, local: true do %>
+  <div>
+    <%= label_tag :name, "Enter a family name:" %>
+    <%= text_field_tag :name %>
+  </div>
+  <div>
+    <%= submit_tag "Lookup" %>
+  </div>
+<% end %>
+
+<% if @name_info.present? %>
+  <h2>Results for <%= params[:name] %>:</h2>
+  <pre><%= JSON.pretty_generate(@name_info) %></pre>
+
+   <p><strong>Meaning:</strong> <%= @name_info %></p>
+   
+<% end %>
