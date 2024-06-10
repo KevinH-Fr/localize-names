@@ -10,5 +10,27 @@
     <% else %>
         <p>No data available.</p>
     <% end %>
+    
+    <hr>
+    <p>
+        <h2>
+            principal : 
+            <%= country_name_and_flag(@data["personalNames"][0]["countryOrigin"]) %>
+            <br>
+        </h2>
+
+        <h3>
+            alternative : 
+            <%= country_name_and_flag(@data["personalNames"][0]["countryOriginAlt"]) %>
+            <br>
+        </h3>        
+        
+            toutes les origines: 
+        <% @data["personalNames"][0]["countriesOriginTop"].each  do |country| %>
+            <%= country_name_and_flag(country) %>        
+        <% end %>
+        
+
+    </p>
 </div>
   
