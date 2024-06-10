@@ -1,0 +1,14 @@
+<div class="card p-2 m-2">    
+    <% if @data %>
+        <p>origines: </p>
+        <% @data['personalNames'].each do |name_result| %>
+            <%= name_result %>
+        <% end %>
+
+    <% elsif @error %>
+        <p>Error: <%= @error %></p>
+    <% else %>
+        <p>No data available.</p>
+    <% end %>
+</div>
+  

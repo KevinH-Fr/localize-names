@@ -23,6 +23,6 @@ Rails.application.routes.draw do
   resources :names, only: :show
 
 
- root 'names#lookup' # Set the root path to the lookup page
+ root 'home#index' # Set the root path to the lookup page
  
 end

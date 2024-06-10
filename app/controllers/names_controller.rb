@@ -22,3 +22,6 @@ class NamesController < ApplicationController
      Rails.application.credentials.behindthename[:behindthename_api_key]
   end
 end
+
+
+
