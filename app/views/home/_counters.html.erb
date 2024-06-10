@@ -1,0 +1,39 @@
+
+<div class="container-fluid text-center d-flex fs-5 scroll-animate">
+
+    <div class="container text-secondary m-1 fs-6 mb-2">
+        <div class="row align-items-center justify-content-center">
+            <div class="col p-0 m-0">
+                <i class="fa fa-user"></i>
+                <div> fiabilité globale </div>
+                <div data-controller="counter" data-target-value="<%= @data["personalNames"][0]["score"] %>"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container text-secondary m-1 fs-6 mb-2">
+        <div class="row align-items-center justify-content-center">
+            <div class="col p-0 m-0">
+                <i class="fa fa-user"></i>
+                <div> fiabilité pays principal </div>
+                <div data-controller="counter" data-target-value="<%= number_to_percentage(@data["personalNames"][0]["probabilityCalibrated"] * 100, precision: 0) %>"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container text-secondary m-1 fs-6 mb-2">
+        <div class="row align-items-center justify-content-center">
+            <div class="col p-0 m-0">
+                <i class="fa fa-user"></i>
+                <div> probabilité tous les pays </div>
+                <div data-controller="counter" data-target-value="<%= number_to_percentage(@data["personalNames"][0]["probabilityAltCalibrated"] * 100, precision: 0) %>"></div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+

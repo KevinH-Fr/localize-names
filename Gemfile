@@ -73,3 +73,7 @@ gem 'httparty'
 gem 'nokogiri'
 
 gem 'countries'
+
+
+gem 'requestjs-rails'
+gem 'jquery-rails'
