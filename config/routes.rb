@@ -17,10 +17,12 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
  # root "home#index"
 
- get 'names/lookup', to: 'names#lookup'
+  get 'names/lookup', to: 'names#lookup'
   get 'names/meaning', to: 'names#meaning'
 
   resources :names, only: :show
+
+  get "about", to: "home#about"
 
 
  root 'home#index' # Set the root path to the lookup page

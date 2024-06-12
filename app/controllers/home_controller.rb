@@ -38,6 +38,9 @@ class HomeController < ApplicationController
     end
   end
 
+  def about
+  end
+
   private
 
   def set_forebears_service

@@ -1,0 +1,30 @@
+
+<nav class="navbar navbar-expand-lg bg-darker shadow-sm">
+  <div class="container-fluid">
+
+    <div class="d-flex flex-column align-items-center me-3">  
+
+      <%= link_to root_path do %>
+        <%= link_to image_tag('/images/logo_courant.jpg', class: '', width: "120"), root_path %>
+      <% end %>
+      
+    </div>
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav me-auto my-2 my-lg-0">
+        <%= nav_link(root_path, "Accueil", "fa-house") %>
+        <%= nav_link(about_path, "A propos", "fa-circle-question") %>
+
+        <%#= nav_link(users_path, "Utilisateurs", "fa-users") %>
+
+      </ul>
+
+    </div>
+
+  </div>
+</nav>

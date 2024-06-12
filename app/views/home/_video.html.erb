@@ -1,0 +1,34 @@
+<div class="video-container position-relative d-flex justify-content-center align-items-center">
+    <div data-controller="video">
+        <video autoplay loop muted playsinline
+           src="https://res.cloudinary.com/dukne3lhz/video/upload/v1718175388/eewdirlofuaettxtlbgk.mp4" 
+           type="video/mp4" id="video-background" data-video-target="video">
+        </video>
+    </div>
+
+    <div class="position-absolute top-0 w-100 d-flex justify-content-center">
+        <h1 class="container rounded bg-transparency text-light text-center p-3 m-4 scroll-appear">
+            Recherchez un nom parmi des millions
+        </h1>
+    </div>
+    
+    <div class="position-absolute bottom-0 w-100 d-flex justify-content-center">
+        <h1 class="container rounded bg-transparency fs-4 text-light text-center p-3 m-4 scroll-appear">
+            <%= form_with url: home_index_path, method: :get, local: true, html: { class: 'form-inline' } do %>
+                <div class="input-group mb-2">
+                    <%= text_field_tag :name, nil, class: 'form-control', placeholder: 'nom...' %>
+                    <div class="input-group-append">
+                        <button class="btn btn-light" type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            <% end %>
+        </h1>
+    </div>
+
+</div>
+
+
+
+
